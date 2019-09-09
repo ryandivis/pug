@@ -3,7 +3,7 @@
 <head>
   <title>Phoenix Urban Guide</title>
   <link rel="stylesheet" href="./assets/fontawesome/css/all.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:800|Open+Sans:300,400,700,700i&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -21,14 +21,14 @@
         <img src="./assets/icon.png" alt="Phoenix Urban Guide">
       </div>
       <h1 class="header-discover">See Phoenix thru the eyes of PUG...</h1>
-      <form class="header-show-me" action="/calender">
-        <span>Show me</span>
+      <form class="header-show-me" action="">
+        <span class="neutra">Show me</span>
         <div class="selector">
           <span class="toggle active">EVENTS</span>
           <span class="toggle">PLACES</span>
           <input class="toggleValue" type="hidden" name="type" value="events">
         </div>
-        <span>in</span>
+        <span class="neutra">in</span>
         <div class="selectdiv">
           <select name="month" id="">
             <option value="1">January</option>
@@ -51,8 +51,112 @@
       </form>
     </div>
   </div>
+  <div class="join">
+    <div class="container">
+      <div class="inner">
+        <h2>Join the 5,000+ local artists and business owners using PUG.</h2>
+        <h3>Sign up now</h3>
+        <div class="email-input">
+          <input type="email" name="email" id="" placeholder="email address">
+          <div class="input-append">
+            <button>Join Now!</button>
+          </div>
+        </div>
+        <div class="after-text">Still don’t get what PUG is? Read more below.</div>
+      </div>
+    </div>
+  </div>
+  <div class="what-is">
+    <div class="container">
+      <div class="inner">
+        <div class="title">
+          <span class="neutra">What Is</span>
+          <img src="./assets/puglogo.png" alt="">
+          <span class="neutra">?</span>
+        </div>
+        <div class="description">
+          <p>Phoenix Urban Guide (PUG) is a new destination map that connects Phoenix residents and visitors to cultural
+            destinations, dining, retail and more.</p>
+        </div>
+        <div class="more">
+          <p>PUG was developed by Artlink Inc. through a ReinventPHX grant in partnership with the City of Phoenix
+            Community & Economic Development Department... <a href="">READ MORE</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="events">
+    <div class="container">
+      <div class="year"></div>
+      <div class="top">
+        <h4>Today's Events</h4>
+        <div class="sponsored">Sponsored Events March 05, 2019</div>
+      </div>
+      <div class="bottom">
+        <img src="./assets/card01.png" alt="">
+        <img src="./assets/card02.png" alt="">
+        <img src="./assets/card03.png" alt="">
+        <img src="./assets/card01.png" alt="">
+        <img src="./assets/card02.png" alt="">
+        <img src="./assets/card03.png" alt="">
+      </div>
+      <div class="view-more">
+        <a href="">VIEW ALL EVENTS<br/>
+        <img src="./assets/more-arrow-down.png" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="left">
+        <p>SUBSCRIBE</p>
+        <div class="email-input">
+          <input type="email" name="email" id="" placeholder="email address">
+          <div class="input-append">
+            <button>Join Now!</button>
+          </div>
+        </div>
+        <img src="./assets/artlink-logo-for-dark-background.png" alt="ArtLink">
+        <span>©2019 Phoenix Urban Guide<br />
+          All rights reserved.</span>
+      </div>
+      <div class="center">
+        <img src="./assets/pug-logo-for-dark-background.png" alt="Phoenix Urban Guide">
+        <p>“See Phoenix thru the eyes of PUG”</p>
+      </div>
+      <div class="right">
+        <div class="top">
+          <div class="site-links">
+            <p>SITE LINKS</p>
+            <a href="">Home</a>
+            <a href="">About Us</a>
+            <a href="">News</a>
+            <a href="">Site Map</a>
+            <a href="">Privacy Policy</a>
+          </div>
+          <div class="tags">
+            <p>TAGS</p>
+            <a href="">Art</a>
+            <a href="">Phoenix</a>
+            <a href="">Gallery</a>
+            <a href="">Business</a>
+            <a href="">Lorem</a>
+          </div>
+        </div>
+        <div class="bottom">
+          <a href="mailto:Contact@PhoenixUrbanGuide.com">Contact@PhoenixUrbanGuide.com</a>
+          <span class="phone">Toll Free 833-123-4567</span>
+          <address>
+            1234 N Central Avenue<br />
+            Phoenix, AZ 85004
+          </address>
+        </div>
+      </div>
+    </div>
+  </div>
   <script>
-    let dropDowns = Array.from(document.querySelectorAll('.header-show-me .selector .toggle'));
+    var dropDowns = Array.from(document.querySelectorAll('.header-show-me .selector .toggle'));
 
     const handleClick = (e) => {
       e.preventDefault();
@@ -66,6 +170,9 @@
     dropDowns.forEach(node => {
       node.addEventListener('click', handleClick)
     });
+
+    var year = new Date().getFullYear();
+    document.querySelector('.events .year').innerText = year;
   </script>
 </body>
 

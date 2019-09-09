@@ -4,6 +4,15 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+@font-face {
+  font-family: 'NeutraFont';
+  src: url('./assets/Neutra\ Text\ Bold.otf') format("opentype");
+}
+
+.neutra {
+  font-family: 'NeutraFont';
+}
+
 .header {
   padding-top: 32px;
   width: 100%;
@@ -17,6 +26,10 @@ body {
 .container {
   max-width: 1140px;
   margin: 0 auto;
+}
+
+.inner {
+  padding: 0 20px;
 }
 
 .navbar {
@@ -61,7 +74,7 @@ body {
   font-size: 30pt;
 }
 
-.header-show-me .selector  {
+.header-show-me .selector {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -152,6 +165,309 @@ body {
   padding-left: 30px;
 }
 
+.join {
+  background: url('./assets/join-background.jpg') repeat-x;
+  height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.join h2 {
+  font-size: 30pt;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.join h3 {
+  font-size: 24pt;
+  text-align: center;
+  font-weight: lighter;
+  margin-bottom: 48px;
+}
+
+.join .after-text {
+  font-size: 16pt;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.join .email-input {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.join .email-input input {
+  outline: none;
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 33px;
+  height: 36px;
+  color: #fff;
+  padding-left: 30px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  min-width: 50%;
+}
+
+.join .email-input .input-append {
+  box-sizing: border-box;
+  margin-left: -1px;
+  outline: none;
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 33px;
+  height: 36px;
+  color: #000;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.join .email-input .input-append button {
+  margin-left: -1px;
+  outline: none;
+  background: none;
+  border: none;
+  height: 36px;
+  color: #000;
+  padding: 0px 30px;
+}
+
+.join .email-input input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 1;
+  /* Firefox */
+}
+
+.what-is {
+  height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.what-is .inner {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.what-is .title {
+  font-size: 50pt;
+  display: flex;
+  align-items: center;
+}
+
+.what-is .description {
+  font-size: 22pt;
+  color: #a6a4a4;
+}
+
+.what-is .more {
+  font-size: 16pt;
+  color: #4c4b4b;
+}
+
+.what-is .more a {
+  font-size: 16pt;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+  color: #e96340;
+}
+
+.events {
+  background: url('./assets/event-top-background.jpg') repeat-x;
+  min-height: 500px;
+}
+
+.events .container {
+  position: relative;
+}
+
+.events .container .year {
+  position: absolute;
+  font-size: 292pt;
+  z-index: 0;
+  color: #e7e9e9;
+  font-family: 'Montserrat';
+  font-weight: 800;
+  left: 50%;
+  margin-left: -450px;
+}
+
+.events .top {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.events .top h4 {
+  font-weight: bold;
+  font-size: 30pt;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #2d2c2c;
+}
+
+.events .top .sponsored{
+  font-size: 18pt;
+  color: #2d2c2c;
+}
+
+.events .bottom{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+.events .bottom img{
+  position: relative;
+  cursor: pointer;
+}
+
+.events .view-more {
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.events .view-more a {
+  text-decoration: none;
+  color: #e76441;
+  font-size: 30pt;
+  margin-bottom: 48px;
+}
+
+.footer {
+  min-height: 500px;
+  background: #0e0e0e;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.footer .container>div {
+  width: 25%;
+}
+
+.footer .center {
+  padding-top: 96px;
+  text-align: center;
+  font-size: 16pt;
+}
+
+.footer .center img {
+  margin-bottom: 32px;
+}
+
+.footer .right,
+.footer .left {
+  padding-top: 120px;
+}
+
+.footer .right .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+
+.footer .right .site-links,
+.footer .right .tags {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .right .site-links a,
+.footer .right .tags a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer .right .bottom a {
+  color: #e96142;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.footer .right .bottom .phone {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.footer .right .bottom address {
+  font-style: normal;
+  font-weight: normal;
+}
+
+.footer .left .email-input {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.footer .left .email-input input {
+  outline: none;
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 33px;
+  height: 36px;
+  color: #fff;
+  padding-left: 30px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  min-width: 60%;
+}
+
+.footer .left .email-input .input-append {
+  box-sizing: border-box;
+  margin-left: -1px;
+  outline: none;
+  background: #e9594d;
+  border: 1px solid #fff;
+  border-radius: 33px;
+  height: 36px;
+  color: #000;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.footer .left .email-input .input-append button {
+  margin-left: -1px;
+  outline: none;
+  background: none;
+  border: none;
+  height: 36px;
+  color: #fff;
+  padding: 0px 30px;
+}
+
+.footer .left .email-input input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 1;
+  /* Firefox */
+}
+
+.footer .left img {
+  margin-bottom: 48px;
+
+}
+
+.footer .left span {
+  display: block;
+}
+
 
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 1140px) {
@@ -164,7 +480,26 @@ body {
     width: 100%;
   }
 
-  .navbar {
+  .navbar,
+  .inner {
     padding: 0 20px;
+  }
+
+  .events .top, .events .bottom {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .footer {
+    padding-bottom: 48px;
+  }
+
+  .footer .container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .footer .container>div {
+    width: 60%;
   }
 }
