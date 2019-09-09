@@ -12,7 +12,7 @@
     <div class="container">
       <div class="navbar">
         <a href="">HOME</a>
-        <a href="">ABOUT</a> 
+        <a href="">ABOUT</a>
         <a href="">CONTACT</a>
         <a href=""><i class="fas fa-search"></i></a>
         <a href="">LOGIN <i class="fas fa-user"></i></a>
@@ -21,31 +21,52 @@
         <img src="./assets/icon.png" alt="Phoenix Urban Guide">
       </div>
       <h1 class="header-discover">See Phoenix thru the eyes of PUG...</h1>
-      <div class="header-show-me">
-        <span>Show me</span> 
-        <span>in</span> 
+      <form class="header-show-me" action="/calender">
+        <span>Show me</span>
+        <div class="selector">
+          <span class="toggle active">EVENTS</span>
+          <span class="toggle">PLACES</span>
+          <input class="toggleValue" type="hidden" name="type" value="events">
+        </div>
+        <span>in</span>
         <div class="selectdiv">
-          <select name="" id="">
-            <option value="">January</option>
-            <option value="">February</option>
-            <option value="">March</option>
-            <option value="">April</option>
-            <option value="">May</option>
-            <option value="">June</option>
-            <option value="">July</option>
-            <option value="">August</option>
-            <option value="">September</option>
-            <option value="">October</option>
-            <option value="">November</option>
-            <option value="">Decemeber</option>
+          <select name="month" id="">
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">Decemeber</option>
           </select>
         </div>
         <div class="buttondiv">
           <button>Show Me</button>
         </div>
-      </div>
+      </form>
     </div>
   </div>
+  <script>
+    let dropDowns = Array.from(document.querySelectorAll('.header-show-me .selector .toggle'));
+
+    const handleClick = (e) => {
+      e.preventDefault();
+      dropDowns.forEach(node => {
+        node.classList.remove('active');
+      });
+      e.currentTarget.classList.add('active');
+      document.querySelector('.toggleValue').value = e.currentTarget.innerText;
+    }
+
+    dropDowns.forEach(node => {
+      node.addEventListener('click', handleClick)
+    });
+  </script>
 </body>
 
 </html>

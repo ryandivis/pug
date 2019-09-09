@@ -61,6 +61,33 @@ body {
   font-size: 30pt;
 }
 
+.header-show-me .selector  {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #555555;
+  text-transform: uppercase;
+  border-radius: 33px;
+  height: 60px;
+  width: 260px;
+}
+
+.header-show-me .selector .toggle {
+  font-weight: normal;
+  font-size: 13pt;
+  padding: 16px 34px;
+  cursor: pointer;
+}
+
+.header-show-me .selector .toggle.active {
+  background: url('./assets/toggle-background.jpg');
+  border-radius: 33px;
+  margin-left: 2px;
+  margin-right: 2px;
+  color: #fff;
+}
+
 
 .header-show-me .selectdiv {
   position: relative;
